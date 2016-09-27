@@ -1,0 +1,1 @@
+json.partial! "host_redirects/host_redirect", host_redirect: @host_redirect

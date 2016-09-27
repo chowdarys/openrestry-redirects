@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Host Redirects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Orig</th>
+      <th>Dest</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @host_redirects.each do |host_redirect| %>
+      <tr>
+        <td><%= host_redirect.orig %></td>
+        <td><%= host_redirect.dest %></td>
+        <td><%= link_to 'Show', host_redirect %></td>
+        <td><%= link_to 'Edit', edit_host_redirect_path(host_redirect) %></td>
+        <td><%= link_to 'Destroy', host_redirect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Host Redirect', new_host_redirect_path %>

@@ -1,0 +1,27 @@
+<%= form_for(host_redirect) do |f| %>
+  <% if host_redirect.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(host_redirect.errors.count, "error") %> prohibited this host_redirect from being saved:</h2>
+
+      <ul>
+      <% host_redirect.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :orig %>
+    <%= f.text_field :orig %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dest %>
+    <%= f.text_field :dest %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Orig:</strong>
+  <%= @host_redirect.orig %>
+</p>
+
+<p>
+  <strong>Dest:</strong>
+  <%= @host_redirect.dest %>
+</p>
+
+<%= link_to 'Edit', edit_host_redirect_path(@host_redirect) %> |
+<%= link_to 'Back', host_redirects_path %>

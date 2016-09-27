@@ -1,0 +1,2 @@
+class HostRedirect < ApplicationRecord
+end
